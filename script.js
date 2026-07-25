@@ -140,19 +140,4 @@ link.classList.add("active");
 });
 
 });
-// Make email links copy to clipboard instead of relying on mailto:
-document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault(); // Stop the default mailto: behavior
-        const email = this.getAttribute('href').replace('mailto:', '');
-        
-        // Copy to clipboard
-        navigator.clipboard.writeText(email).then(() => {
-            alert('✅ Email address copied: ' + email);
-        }).catch(() => {
-            // Fallback for older browsers
-            prompt('Copy this email address:', email);
-        });
-    });
-});
 ;
