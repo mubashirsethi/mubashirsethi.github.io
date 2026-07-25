@@ -155,9 +155,4 @@ document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
         });
     });
 });
-        }
-
-    });
-
-}); */
 ;
